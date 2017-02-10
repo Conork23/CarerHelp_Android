@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_client"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.intimealarm.carerhelp.AddClientActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:labelFor="@+id/et_name"
+            android:id="@+id/lbl_name"
+            style="@style/textLbl"
+            android:text="@string/namelbl"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            />
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/et_name"
+            android:inputType="textCapWords|textPersonName"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/lbl_name"
+            android:layout_alignBaseline="@id/lbl_name"
+            android:hint="@string/client_name"
+            android:nextFocusDown="@+id/et_client_id"/>
+
+        <TextView
+            android:labelFor="@+id/et_client_id"
+            android:id="@+id/lbl_client_id"
+            style="@style/textLbl"
+            android:text="@string/client_id"
+            android:layout_below="@+id/lbl_name"
+            android:layout_alignParentStart="true"/>
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:id="@+id/et_client_id"
+            android:inputType="number"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/et_name"
+            android:layout_toEndOf="@+id/lbl_client_id"
+            android:layout_alignBaseline="@id/lbl_client_id"
+            android:hint="@string/client_id_hint"
+            android:nextFocusDown="@+id/et_phone"
+            />
+
+        <TextView
+            android:labelFor="@+id/et_phone"
+            android:id="@+id/lbl_phone"
+            style="@style/textLbl"
+            android:text="@string/phonelbl"
+            android:layout_below="@+id/lbl_client_id"
+            android:layout_alignParentStart="true"/>
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:id="@+id/et_phone"
+            android:inputType="number|phone"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/et_client_id"
+            android:layout_toEndOf="@+id/lbl_phone"
+            android:layout_alignBaseline="@id/lbl_phone"
+            android:hint="@string/client_phone_number"
+            android:nextFocusDown="@+id/et_address"
+            />
+
+        <TextView
+            android:labelFor="@+id/et_address"
+            android:id="@+id/lbl_address"
+            style="@style/textLbl"
+            android:text="@string/addresslbl"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/lbl_phone" />
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:id="@+id/et_address"
+            android:inputType="textCapWords|textPostalAddress"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/et_phone"
+            android:layout_toEndOf="@+id/lbl_address"
+            android:layout_alignBaseline="@id/lbl_address"
+            android:hint="@string/client_address"
+            android:imeOptions="actionDone"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:labelFor="@+id/timePicker"
+            android:id="@+id/lbl_time"
+            style="@style/textLbl"
+            android:text="@string/time"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="false"
+            android:layout_alignBottom="@+id/timePicker"
+            android:layout_alignParentTop="true" />
+
+        <TimePicker
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/timePicker"
+            android:timePickerMode="spinner"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/lbl_time"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:text="@string/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_save"
+        style="@style/Widget.AppCompat.Button.Colored" />
+
+
+</LinearLayout>

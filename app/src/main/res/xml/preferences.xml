@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:defaultValue="@string/prefs_default_phone"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/title_company_phone_pref"
+        android:key="company_number"
+        android:inputType="phone"
+        android:summary="@string/prefs_default_phone"/>
+
+    <EditTextPreference
+        android:defaultValue="@string/prefs_default_login"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/title_login_sms_pref"
+        android:key="sms_login_template"
+        android:summary="@string/prefs_default_login"/>
+
+    <EditTextPreference
+        android:defaultValue="@string/prefs_default_logout"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/title_logout_sms_pref"
+        android:key="sms_logout_template"
+        android:summary="@string/prefs_default_logout"/>
+
+</PreferenceScreen>

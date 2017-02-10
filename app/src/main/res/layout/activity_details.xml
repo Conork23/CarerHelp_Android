@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.intimealarm.carerhelp.DetailsActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lbl_name"
+            style="@style/textLbl"
+            android:text="@string/namelbl"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholder_client"
+            android:id="@+id/tv_details_name"
+            style="@style/textTv"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/lbl_name"
+            android:layout_alignBaseline="@id/lbl_name"/>
+
+        <TextView
+            android:id="@+id/lbl_id"
+            style="@style/textLbl"
+            android:text="@string/client_idLbl"
+            android:layout_below="@+id/lbl_name"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholder_id"
+            android:id="@+id/tv_details_id"
+            style="@style/textTv"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/lbl_id"
+            android:layout_alignBaseline="@id/lbl_id"/>
+
+        <TextView
+            android:id="@+id/lbl_phone"
+            style="@style/textLbl"
+            android:text="@string/phonelbl"
+            android:layout_below="@+id/lbl_id"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholder_phone"
+            android:id="@+id/tv_details_phone"
+            style="@style/textTv"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/lbl_phone"
+            android:layout_alignBaseline="@id/lbl_phone"/>
+
+        <TextView
+            android:id="@+id/lbl_address"
+            style="@style/textLbl"
+            android:text="@string/addresslbl"
+            android:layout_below="@+id/lbl_phone"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholder_address"
+            android:id="@+id/tv_details_address"
+            style="@style/textTv"
+            android:lines="2"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/lbl_address"
+            android:layout_alignBaseline="@id/lbl_address"/>
+
+
+    </RelativeLayout>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        map:cameraZoom="16"
+        class="com.google.android.gms.maps.SupportMapFragment" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:text="@string/log_in"
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Colored"/>
+
+        <Button
+            android:text="@string/log_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_logout"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Colored"/>
+    </LinearLayout>
+
+
+</LinearLayout>
